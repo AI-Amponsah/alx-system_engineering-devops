@@ -1,2 +1,2 @@
 #!/bin/bash 
-echo "/etc/passwd | head"
+echo "head -n 10 /etc/passwd "
