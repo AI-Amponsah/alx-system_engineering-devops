@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Script to install nginx using puppet
 
 package {'nginx':
