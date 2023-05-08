@@ -13,8 +13,8 @@ frontend http_front
 
 backend http_back
         balance roundrobin
-        server 135836-web-01 54.146.81.195:80 check
-        server 135836-web-02 34.224.6.180:80 check
+        server 161872-web-01 100.26.229.171:80 check
+        server 161872-web-02 54.198.48.93:80 check
 ">> /etc/haproxy/haproxy.cfg
 
 # Enable HAProxy management
