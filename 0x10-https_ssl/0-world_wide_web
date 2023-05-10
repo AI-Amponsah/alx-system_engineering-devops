@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# displays information about subdomains
 
 print_info ()
 {
