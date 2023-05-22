@@ -1,0 +1,26 @@
+#!/bin/env bash
+
+# Get the current date in the required format (day-month-year)
+current_date=$(date +'%d-%m-%Y')
+
+# Set the filename for the MySQL dump
+dump_filename="backup.sql"
+
+# Set the filename for the compressed archive
+archive_filename="${current_date}.tar.gz"
+
+# Get the MySQL password from the script argument
+mysql_password="$1"
+
+# Generate the MySQL dump
+mysqldump -u root -p${mysql_password} --all-databases > ${dump_filename}
+
+# Create a tar.gz archive of the MySQL dump
+tar -czvf ${archive_filename} ${dump_filename}
+
+# Remove the MySQL dump file
+rm ${dump_filename}
+
+# Print a success message
+echo "MySQL dump created and compressed as ${archive_filename}"
+
