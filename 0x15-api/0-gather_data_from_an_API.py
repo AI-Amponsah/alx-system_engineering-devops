@@ -16,8 +16,8 @@ if __name__ == "__main__":
     user_tasks = [task for task in tasks if task.get("userId") == employee_id]
     tasks_completed = [task for task in user_tasks if task.get("completed")]
 
-    print("Employee {} is done with tasks ({}/{}):".format(name,
+    print("Employee {} is done with tasks({}/{}):".format(name,
           len(tasks_completed), len(user_tasks)))
 
     for task in tasks_completed:
-        print("\t{}".format(task.get("title")))
+        print("\t {}".format(task.get("title")))
